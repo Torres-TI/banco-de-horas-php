@@ -31,7 +31,7 @@ include("../connection.php");
     if ($end_hours < $start_hours) {
         $end_hours += 1440;
     }
-    //Check if the start time is between 22:00 and 00:00
+    //Check if the start time is between 22:00 and 05:00 am
     if ($start_hours > 1320 && $start_hours < 1740) {
         $night_time_start = $start_hours;
         $day_time_start = 0;
@@ -39,7 +39,7 @@ include("../connection.php");
         $day_time_start = $start_hours;
         $night_time_start = 0;
     }
-    //Check if the end time is between 22:00 and 00:00
+    //Check if the end time is between 22:00 and 05:00
     if ($end_hours < 1740 && $end_hours > 1320) {
         $night_time_end = $end_hours;
         $day_time_end = 0;
@@ -54,10 +54,6 @@ include("../connection.php");
     //Check if the night time end is between 22:00 and 00:00
     if ($night_time_end > 1320 && $night_time_end < 1440) {
         $night_time_end -= 1320;
-    }
-    //Check if the night time end is after 00:00
-    if ($night_time_end > 1440) {
-        $night_time_end = $night_time_end - 1320;
     }
     //Calculate the day and night period
     $day_period = $day_time_end - $day_time_start;
