@@ -18,9 +18,9 @@
         <label>Nome</label></br>
         <input type="text" name="name" id="name"></br>
         <label>Hora de entrada</label></br>
-        <input type="time" name="journeyStart" id="journeyStart"></br>
+        <input type="time" name="journey_start" id="journey_start"></br>
         <label>Hora de saída</label></br>
-        <input type="time" name="journeyEnd" id="journeyEnd"></br>
+        <input type="time" name="journey_end" id="journey_end"></br>
         <Button class="form_button" type="submit">
             Enviar
         </Button>
