@@ -18,13 +18,23 @@
         <label>Nome</label></br>
         <input type="text" name="name" id="name"></br>
         <label>Hora de entrada</label></br>
-        <input type="time" name="journey_start" id="journey_start"></br>
+        <input type="time" name="journeyStart" id="journeyStart"></br>
         <label>Hora de saída</label></br>
-        <input type="time" name="journey_end" id="journey_end"></br>
-        <Button class="form_button" type="submit" name="submit" id="submit">
+        <input type="time" name="journeyEnd" id="journeyEnd"></br>
+        <Button class="form_button" type="submit">
             Enviar
         </Button>
     </form>
+    <!-- <h1>Banco de horas</h1>
+    <form action="./src/forms/test_form.php" method="POST" class="form">
+        <label>Nome</label></br>
+        <input type="text" name="name" id="name"></br>
+        <label>Horas</label></br>
+        <input type="time" name="createdAt" id="createdAt"></br>
+        <Button class="form_button" type="submit" value="Save">
+            Enviar
+        </Button>
+    </form> -->
 </body>
 
 </html>
