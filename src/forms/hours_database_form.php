@@ -14,11 +14,21 @@ include("../connection.php");
 
 <body>
     <?php
+    include("../connection.php");
     // Get the values from the form
     $name = $_POST["name"];
     $start_journey = $_POST["journey_start"];
     $end_journey = $_POST["journey_end"];
 
+    // Insert the values in the database
+    $sql = "INSERT INTO users(name, journey_start, journey_end) 
+    VALUES('$name', '$start_journey', '$end_journey')";
+    $result = $mysqli->query($sql);
+    if ($result) {
+        echo "Dados inseridos com sucesso!";
+    } else {
+        echo "Erro ao inserir os dados!";
+    }
     // Transform the values in DateTime
     $start_time = new DateTime($start_journey);
     $end_time = new DateTime($end_journey);
